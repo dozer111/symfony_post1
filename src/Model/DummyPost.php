@@ -23,11 +23,11 @@ final class DummyPost
     private $category;
 
     /**
-     * Post constructor.
      *
      * @param int           $id
      * @param string        $title
      * @param DummyCategory $category
+     * @return void
      */
     public function __construct(int $id, string $title, DummyCategory $category)
     {
@@ -55,7 +55,7 @@ final class DummyPost
     /**
      * @param string $title
      *
-     * @return Post
+     * @return DummyPost
      */
     public function setTitle(string $title): self
     {
@@ -75,7 +75,7 @@ final class DummyPost
     /**
      * @param string $description
      *
-     * @return Post
+     * @return DummyPost
      */
     public function setDescription(string $description): self
     {
@@ -95,7 +95,7 @@ final class DummyPost
     /**
      * @param string $image
      *
-     * @return Post
+     * @return DummyPost
      */
     public function setImage(string $image): self
     {
@@ -115,7 +115,7 @@ final class DummyPost
     /**
      * @param \DateTime $dateTime
      *
-     * @return Post
+     * @return DummyPost
      */
     public function setCreatedAt(\DateTime $dateTime): self
     {
@@ -135,7 +135,7 @@ final class DummyPost
     /**
      * @param DummyCategory $category
      *
-     * @return Post
+     * @return DummyPost
      */
     public function setCategory(DummyCategory $category): self
     {

@@ -18,9 +18,8 @@ final class DummyCategory
     private $title;
 
     /**
-     * DummyCategory constructor.
-     *
      * @param string $title
+     * @return void
      */
     public function __construct(string $title)
     {
