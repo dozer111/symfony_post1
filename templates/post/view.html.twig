@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>#{{ post.id}} {{ post.title}}</h1>
+    <hr>
+    <h2>Category:{{ post.category.title }}</h2>
+    <hr>
+    <p>{{  post.description }}</p>
+    <hr>
+    <p><b>{{ post.createdAt.format('d-m-Y') }}</b></p>
+{% endblock %}

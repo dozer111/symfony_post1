@@ -1,0 +1,5 @@
+single_page:
+  path: /post/{id}
+  controller: App\Controller\DummyPostController::view
+  requirements:
+      id: '\d+'
