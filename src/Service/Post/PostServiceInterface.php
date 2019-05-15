@@ -2,7 +2,7 @@
 
 namespace App\Service\Post;
 
-interface PostCerviceInterface
+interface PostServiceInterface
 {
     public function getPost(int $id);
 }

@@ -10,25 +10,16 @@
 
 namespace App\Model;
 
-/**
- * Null Object Category class.
- */
-final class DummyCategory
+final class Category
 {
     private $title;
 
-    /**
-     * @param string $title
-     * @return void
-     */
+
     public function __construct(string $title)
     {
         $this->title = $title;
     }
 
-    /**
-     * @return string
-     */
     public function getTitle(): string
     {
         return $this->title;

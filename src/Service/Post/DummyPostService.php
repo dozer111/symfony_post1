@@ -10,8 +10,8 @@
 
 namespace App\Service\Post;
 
-use App\Model\DummyCategory;
-use App\Model\DummyPost;
+use App\Model\Category;
+use App\Model\Post;
 use Faker\Factory;
 
 /**
@@ -19,28 +19,25 @@ use Faker\Factory;
  *
  * Class DummyPostService
  */
-final class DummyPostService implements PostCerviceInterface
+final class DummyPostService implements PostServiceInterface
 {
+
     /**
-     * Generate dummy post data.
-     *
      * @param int $id
-     *
-     * @return DummyPost
-     *
+     * @return Post
      * @throws \Exception
      */
-    public function getPost(int $id)
+    public function getPost(int $id):Post
     {
         $faker = Factory::create();
-        $category = new DummyCategory($faker->title());
-        $post = new DummyPost(
+        $category = new Category($faker->title());
+        $post = new Post(
             $id,
-            $faker->sentence(\mt_rand(4, 10)),
+            $faker->sentence(rand(4, 10)),
             $category
         );
         $post
-            ->setDescription($faker->paragraph(\mt_rand(7, 20)))
+            ->setDescription($faker->paragraph(rand(7, 20)))
             ->setImage($faker->image())
             ->setCreatedAt(new \DateTime());
 
